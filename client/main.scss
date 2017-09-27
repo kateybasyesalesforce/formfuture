@@ -1,2 +1,6 @@
 @import "{}/imports/ui/stylesheets/not-found.scss";
 @import "{}/node_modules/@salesforce-ux/design-system/scss/index.scss";
+
+.slds-context-bar {
+	border-top: 1px solid rgb(216, 221, 230);
+}
