@@ -1,15 +1,26 @@
 import './globalNav.html';
 
+
+
 // Template.globalNav.onCreated(function globalNavOnCreated() {
 //   // counter starts at 0
 //   this.counter = new ReactiveVar(0);
 // });
 
-// Template.globalNav.helpers({
-//   counter() {
-//     return Template.instance().counter.get();
-//   },
-// });
+isActiveRoute = function(routeName) {
+	const active = ActiveRoute.name(routeName)
+    && FlowRouter.getRouteName() === routeName;
+  return active && 'slds-is-active';
+}
+
+Template.globalNav.helpers({
+  isActiveRouteHome() {
+  	return isActiveRoute('App.home');
+  },
+  isActiveRouteComp() {
+  	return isActiveRoute('App.component');
+  },
+});
 
 // Template.globalNav.events({
 //   'click button'(event, instance) {
