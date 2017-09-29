@@ -20,6 +20,9 @@ Template.globalNav.helpers({
   isActiveRouteComp() {
   	return isActiveRoute('App.component');
   },
+  menuObjects(){
+  	return ["Leads", "Tasks", "Files", "Accounts", "Contacts", "Campaigns", "Dashboards", "Reports", "Chatter", "Groups"];
+  }
 });
 
 // Template.globalNav.events({
