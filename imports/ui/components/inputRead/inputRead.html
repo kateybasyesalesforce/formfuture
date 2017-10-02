@@ -1,0 +1,29 @@
+<template name="inputRead">
+	<div role="listitem" class="slds-has-flexi-truncate slds-p-horizontal_x-small">
+		<div>
+			<div class="slds-form-element slds-form-element_edit slds-grow slds-hint-parent slds-p-vertical_xx-small">
+
+				<div class="test-id__field-label-container">
+					<span class="test-id__field-label slds-form-element__label">{{label}}</span>
+				</div> <!-- End label -->
+
+				<div class="slds-form-element__control slds-grid">
+					<span class="slds-form-element__static slds-grow">
+						{{#if link}}
+							<a href="">{{content}}</a>
+						{{else}}
+							{{content}}
+						{{/if}}
+					</span>
+					<button class="slds-button slds-button_icon" title="Edit Opportunity Owner">
+					  <svg class="slds-button__icon" aria-hidden="true">
+					    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/symbolsUtility.svg#edit" />
+					  </svg>
+					  <span class="slds-assistive-text">Edit {{label}}</span>
+					</button>
+				</div> <!-- End Content -->
+
+			</div>
+		</div>
+	</div>
+</template>
