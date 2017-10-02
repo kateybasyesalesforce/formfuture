@@ -1,21 +1,6 @@
 import './tabs.html';
 
 import '../../components/card/card.js';
-
-// Template.globalNav.onCreated(function globalNavOnCreated() {
-//   // counter starts at 0
-//   this.counter = new ReactiveVar(0);
-// });
-
-// Template.globalNav.helpers({
-//   counter() {
-//     return Template.instance().counter.get();
-//   },
-// });
-
-// Template.globalNav.events({
-//   'click button'(event, instance) {
-//     // increment the counter when button is clicked
-//     instance.counter.set(instance.counter.get() + 1);
-//   },
-// });
+import '../../components/detailEdit/detailEdit.js';
+import '../../components/inputEdit/inputEdit.js';
+import '../../components/inputRead/inputRead.js';

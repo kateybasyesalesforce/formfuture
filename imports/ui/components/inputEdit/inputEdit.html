@@ -1,0 +1,39 @@
+<template name="inputEdit">
+	<div role="listitem" class="slds-has-flexi-truncate slds-p-horizontal_x-small">
+		<div>
+			<div class="slds-form-element slds-form-element_edit slds-grow slds-hint-parent slds-p-vertical_xx-small">
+
+				<div class="test-id__field-label-container">
+					<label class="slds-form-element__label" for="input-unique-id">
+						{{label}}
+						{{#if required}}
+							<abbr class="slds-required" title="required">*</abbr>
+						{{/if}}
+					</label>
+				</div> <!-- End label -->
+
+				<div class="slds-form-element__control slds-grid">
+
+					{{#if inputIsInput inputType }}
+				    <input type="text" id="input-unique-id" class="slds-input" placeholder="" value="{{content}}" />
+				  {{else}}
+				  	{{#if inputIsPicklist inputType }}
+				  		{{>pickList}}
+				  	{{else}}
+				  		{{#if inputIsLookup inputType}}
+				  			{{>lookup}}
+				  		{{else}}
+				  			{{#if inputIsTextarea inputType}}
+				  				<textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text"></textarea>
+				  			{{/if}}
+				  		{{/if}}
+				  	{{/if}}
+				  {{/if}}
+
+
+				</div> <!-- End Content -->
+
+			</div>
+		</div>
+	</div>
+</template>

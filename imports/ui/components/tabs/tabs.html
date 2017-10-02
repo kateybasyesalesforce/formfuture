@@ -6,6 +6,9 @@
 	      role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-2" id="tab-default-2__item">Details</a></li>
 	  </ul>
 	  <div id="tab-default-1" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-1__item">Activity Content</div>
-	  <div id="tab-default-2" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-2__item">{{> detail accountName="Hello"}}</div>
+	  <div id="tab-default-2" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-2__item">
+	  	{{> detailEdit}}
+	  	{{> detail}}
+	  </div>
 	</div>
 </template>

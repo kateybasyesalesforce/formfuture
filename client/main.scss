@@ -6,6 +6,13 @@ html {
   background: rgb(175, 197, 222);
 }
 
+.detailEditContainer {
+  box-shadow: 0 2px 4px 4px rgba(0,0,0,.16);
+  border-radius: .25rem;
+  -webkit-transition: .1s box-shadow ease-in-out;
+  transition: .1s box-shadow ease-in-out;
+}
+
 .ff-box {
 	padding: 1rem;
 	border-bottom: 1px solid #dddbda;

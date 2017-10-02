@@ -1,6 +1,21 @@
 import './detail.html';
 
 
+Template.detail.onCreated(function () {
+	Session.set('readIsVisible', true);
+	console.log(Session.get('readIsVisible') + " on load");
+});
+
+Template.detail.helpers({
+  readIsVisible() {
+    if(Session.get('readIsVisible')) {
+    	return 'slds-show';
+    }
+    else {
+    	return 'slds-hide';
+    }
+  },
+});
 
 // Template.globalNav.onCreated(function globalNavOnCreated() {
 //   // counter starts at 0

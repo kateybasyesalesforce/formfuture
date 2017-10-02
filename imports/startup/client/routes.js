@@ -1,5 +1,6 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { Session } from 'meteor/session'
 
 // Import needed templates
 import '../../ui/layouts/test/test.js';
