@@ -5,7 +5,7 @@ import { Session } from 'meteor/session'
 // Import needed templates
 import '../../ui/layouts/test/test.js';
 import '../../ui/pages/home/home.js';
-import '../../ui/pages/1_1_find/1_1_find.js';
+import '../../ui/pages/testPage/testPage.js';
 import '../../ui/pages/not-found/not-found.js';
 
 // Set up all routes in the app
@@ -16,10 +16,10 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/test/1_1_find', {
-  name: 'App.1_1_find',
+FlowRouter.route('/test/:whichPage/:action/:attempt', {
+  name: 'App.testPage',
   action() {
-    BlazeLayout.render('App_test', { main: '1_1_find' });
+    BlazeLayout.render('App_test', { main: 'testPage' });
   },
 });
 
