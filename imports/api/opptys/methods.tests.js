@@ -1,24 +1,24 @@
-// Tests for links methods
+// Tests for opptys methods
 //
 // https://guide.meteor.com/testing.html
 
 import { Meteor } from 'meteor/meteor';
 import { assert } from 'meteor/practicalmeteor:chai';
-import { Links } from './links.js';
+import { Opptys } from './opptys.js';
 import './methods.js';
 
 if (Meteor.isServer) {
-  describe('links methods', function () {
+  describe('opptys methods', function () {
     beforeEach(function () {
-      Links.remove({});
+      Opptys.remove({});
     });
 
-    it('can add a new link', function () {
-      const addLink = Meteor.server.method_handlers['links.insert'];
+    it('can add a new oppty', function () {
+      const addOppty = Meteor.server.method_handlers['opptys.insert'];
 
-      addLink.apply({}, ['meteor.com', 'https://www.meteor.com']);
+      addOppty.apply({}, ['meteor.com', 'https://www.meteor.com']);
 
-      assert.equal(Links.find().count(), 1);
+      assert.equal(Opptys.find().count(), 1);
     });
   });
 }

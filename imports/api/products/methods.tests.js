@@ -1,24 +1,24 @@
-// Tests for links methods
+// Tests for products methods
 //
 // https://guide.meteor.com/testing.html
 
 import { Meteor } from 'meteor/meteor';
 import { assert } from 'meteor/practicalmeteor:chai';
-import { Links } from './links.js';
+import { Products } from './products.js';
 import './methods.js';
 
 if (Meteor.isServer) {
-  describe('links methods', function () {
+  describe('products methods', function () {
     beforeEach(function () {
-      Links.remove({});
+      Products.remove({});
     });
 
     it('can add a new link', function () {
-      const addLink = Meteor.server.method_handlers['links.insert'];
+      const addProduct = Meteor.server.method_handlers['products.insert'];
 
-      addLink.apply({}, ['meteor.com', 'https://www.meteor.com']);
+      addProduct.apply({}, ['meteor.com', 'https://www.meteor.com']);
 
-      assert.equal(Links.find().count(), 1);
+      assert.equal(Products.find().count(), 1);
     });
   });
 }
