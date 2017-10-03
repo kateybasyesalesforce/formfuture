@@ -9,6 +9,17 @@ html {
   background: rgb(175, 197, 222);
 }
 
+.ff-option-allLines {
+	.ff-fieldWrapper {
+		border-bottom: 1px solid #E0E5EE;
+	}
+
+	.ff-fieldContent {
+    min-height: auto;
+    padding: 0;
+	}
+}
+
 .detailEditContainer {
   box-shadow: 0 2px 4px 4px rgba(0,0,0,.16);
   border-radius: .25rem;
