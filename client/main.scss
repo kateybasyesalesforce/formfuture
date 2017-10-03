@@ -11,10 +11,11 @@ html {
 
 .ff-option-allLines {
 	.ff-fieldWrapper {
-		border-bottom: 1px solid #E0E5EE;
+		// border-bottom: 1px solid #E0E5EE;
 	}
 
 	.ff-fieldContent {
+		border-bottom: 1px solid #E0E5EE;
     min-height: auto;
     padding: 0;
 	}
