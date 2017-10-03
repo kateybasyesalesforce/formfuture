@@ -1,0 +1,13 @@
+GeneratedOn,GeneratedBy,Description,Family,Id,Name,ProductCode
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Small Office Property Coverage,,,Small Office Property Coverage,AIC-BPOFF25-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Large Office Property Coverage,,,Large Office Property Coverage,AIC-BPOFF100-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Corporate Office Property Coverage,,,Corporate Office Property Coverage,AIC-BPOFF500-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Small Garage Property Coverage,,,Small Garage Property Coverage,AIC-BPGAR10-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Active Garage Property Coverage,,,Active Garage Property Coverage,AIC-BPGAR30-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Commercial Garage Property Coverage,,,Commercial Garage Property Coverage,AIC-BPGAR100-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Small Healthcare Property Coverage,,,Small Healthcare Property Coverage,AIC-BPHLC15-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Medium Healthcare Property Coverage,,,Medium Healthcare Property Coverage,AIC-BPHLC50-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Healthcare Property Coverage,,,Healthcare Property Coverage,AIC-BPHLC50-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Small Manufacturer Property Coverage,,,Small Manufacturer Property Coverage,AIC-BPMFG15-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Medium Manufacturer Property Coverage,,,Medium Manufacturer Property Coverage,AIC-BPMFG50-A
+2017-04-12T12:54:25-07:00,UXMetricsGenerator/1.0,Manufacturer Property Coverage,,,Manufacturer Property Coverage,AIC-BPMFG50-A
