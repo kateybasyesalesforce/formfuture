@@ -17,7 +17,12 @@
 				</div>
 			</div>
 			<div class='slds-size_1-of-3'>
-				{{>card icon="contact" objectName="Contact Roles" count="0"}}
+				{{#with contacts }}
+					{{>card icon="contact" objectName="Contacts" count=5 headers = this.keys data=this }}
+				{{/with}}
+				{{#with products }}
+					{{>card icon="product" objectName="Products" count=5 headers = this.keys data=this }}
+				{{/with}}
 			</div>
 		</div>
 	</div>
