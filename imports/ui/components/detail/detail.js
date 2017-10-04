@@ -3,7 +3,6 @@ import './detail.html';
 
 Template.detail.onCreated(function () {
 	Session.set('readIsVisible', true);
-	console.log(Session.get('readIsVisible') + " on load");
 });
 
 Template.detail.helpers({

@@ -4,12 +4,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Opportunity Owner Email" content=this.OwnerEmail link="true" nonEditable="true"}}
+					<div class='{{isEmpty(this.OwnerEmail)}}'>
+						{{>inputRead label="Opportunity Owner Email" content=this.OwnerEmail link="true" nonEditable="true"}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Amount" content=this.Amount}}
+					<div class='{{isEmpty(this.Amount)}}'>
+						{{>inputRead label="Amount" content=this.Amount}}
+					</div>
 				{{/with}}
 			</div>
 		</div>
@@ -18,12 +22,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Opportunity Name" content=this.Name}}
+					<div class='{{isEmpty(this.Name)}}'>
+						{{>inputRead label="Opportunity Name" content=this.Name}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Close Date" content=this.CloseDate}}
+					<div class='{{isEmpty(this.CloseDate)}}'>
+						{{>inputRead label="Close Date" content=this.CloseDate}}
+					</div>
 				{{/with}}
 	</div>
 		</div>
@@ -32,12 +40,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Account Name" content=this.AccountName link="true"}}
+					<div class='{{isEmpty(this.AccountName)}}'>
+						{{>inputRead label="Account Name" content=this.AccountName link="true"}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Stage" content="Unqualified"}}
+					<div class='{{isEmpty(this.Stage)}}'>
+						{{>inputRead label="Stage" content=this.Stage}}
+					</div>
 				{{/with}}
 	</div>
 		</div>
@@ -46,12 +58,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Type" content=this.Type}}
+					<div class='{{isEmpty(this.Type)}}'>
+						{{>inputRead label="Type" content=this.Type}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Probability (%)" content=22 nonEditable="true"}}
+					<div class='full'>
+						{{>inputRead label="Probability (%)" content=22 nonEditable="true"}}
+					</div>
 				{{/with}}
 			</div>
 		</div>
@@ -60,12 +76,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Lead Source" content=""}}
+					<div class='{{isEmpty(this.LeadSource)}}'>
+						{{>inputRead label="Lead Source" content=this.LeadSource}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Expected Revenue" content=""}}
+					<div class='{{isEmpty(this.ExpectedRevenue)}}'>
+						{{>inputRead label="Expected Revenue" content=this.ExpectedRevenue}}
+					</div>
 				{{/with}}
 			</div>
 		</div>
@@ -74,12 +94,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Quantity" content=""}}
+					<div class='{{isEmpty(this.Quantity)}}'>
+						{{>inputRead label="Quantity" content=this.Quantity}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Next Step" content=""}}
+					<div class='{{isEmpty(this.NextStep)}}'>
+						{{>inputRead label="Next Step" content=this.NextStep}}
+					</div>
 				{{/with}}
 			</div>
 		</div>
@@ -88,7 +112,9 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-col slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Description" content=""}}
+					<div class='{{isEmpty(this.Description)}}'>
+						{{>inputRead label="Description" content=this.Description}}
+					</div>
 				{{/with}}
 			</div>
 		</div>
@@ -97,12 +123,16 @@
 		<div class='slds-grid slds-grid_pull-padded'>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Created" content="9/14/2017 3:49 PM" nonEditable="true"}}
+					<div class='full'>
+						{{>inputRead label="Created" content="9/14/2017 3:49 PM" nonEditable="true"}}
+					</div>
 				{{/with}}
 			</div>
 			<div class='slds-size_1-of-2 slds-p-horizontal_small'>
 				{{#with oppty }}
-					{{>inputRead label="Last Modified" content="9/14/2017 3:49 PM" nonEditable="true"}}
+					<div class='full'>
+						{{>inputRead label="Last Modified" content="9/14/2017 3:49 PM" nonEditable="true"}}
+					</div>
 				{{/with}}
 			</div>
 		</div>

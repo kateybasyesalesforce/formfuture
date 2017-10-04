@@ -9,16 +9,18 @@ html {
   background: rgb(175, 197, 222);
 }
 
-.ff-option-allLines {
-	.ff-fieldWrapper {
-		// border-bottom: 1px solid #E0E5EE;
+.ff-option-allLines, .ff-option-emptyLines {
+
+	.ff-fieldContent, .empty .ff-fieldContent {
+		border-bottom: 1px solid #E0E5EE;
+	  min-height: auto;
+	  padding: 0;
 	}
 
-	.ff-fieldContent {
-		border-bottom: 1px solid #E0E5EE;
-    min-height: auto;
-    padding: 0;
-	}
+}
+
+.ff-option-emptyLines .full .ff-fieldContent {
+	border-bottom: none;
 }
 
 .detailEditContainer {

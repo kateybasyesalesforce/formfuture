@@ -11,15 +11,19 @@ const opptys = [{"GeneratedOn":"2017-04-12T12:54:25-07:00","GeneratedBy":"UXMetr
 
 Template.testPage.helpers({
 	oppty: function(){
+    var isEmpty = function(content){
+      if (content) {return "full"}
+        else{ return "empty" }
+    }
     var testOppty = "";
     opptys.forEach(function(oppty) {
 
       if(oppty.Id == FlowRouter.getParam("testId")){
         testOppty = oppty;
       }
-
     });
-    console.log(testOppty);
+    testOppty.isEmpty = isEmpty;
+    console.log(testOppty.isEmpty(""))
     return testOppty;
 	},
   whichPage: function(){
