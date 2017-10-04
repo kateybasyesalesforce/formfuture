@@ -7,8 +7,10 @@
 	  </ul>
 	  <div id="tab-default-1" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-1__item">Activity Content</div>
 	  <div id="tab-default-2" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-2__item">
-	  	{{> detailEdit}}
-	  	{{> detail}}
+	  	{{#with oppty}}
+	  		{{> detailEdit oppty=this}}
+		  	{{> detail oppty=this}}
+		  {{/with}}
 	  </div>
 	</div>
 </template>

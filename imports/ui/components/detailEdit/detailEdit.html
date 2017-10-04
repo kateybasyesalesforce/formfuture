@@ -1,62 +1,64 @@
 <template name="detailEdit">
 	<div class='detailEditContainer {{editIsVisible}}'>
-		<!-- Row 1 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputRead label="Opportunity Owner" content="templated" link="true" nonEditable="true"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Amount" 
-			content="templated" inputType="input"}}</div>
-		</div>
+		{{#with oppty}}
+			<!-- Row 1 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputRead label="Opportunity Owner Email" content=this.OwnerEmail link="true" nonEditable="true"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Amount" 
+				content=this.Amount inputType="input"}}</div>
+			</div>
 
-		<!-- Row 2 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Opportunity Name" content="templated" inputType="input" required="true"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Close Date" 
-			content="templated" inputType="input" required="true"}}</div>
-		</div>
+			<!-- Row 2 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Opportunity Name" content=this.Name inputType="input" required="true"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Close Date" 
+				content=this.CloseDate inputType="input" required="true"}}</div>
+			</div>
 
-		<!-- Row 3 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Account Name" content="templated" inputType="lookup" link="true" required="true" nonEditable="true"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Stage" 
-			content="templated" inputType="input" required="true"}}</div>
-		</div>
+			<!-- Row 3 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Account Name" content=this.AccountName inputType="lookup" link="true" required="true" nonEditable="true"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Stage" 
+				content="Unqualified" inputType="input" required="true"}}</div>
+			</div>
 
-		<!-- Row 4 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Type" content="templated" inputType="picklist"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Probability (%)" 
-			content="templated" inputType="input"}}</div>
-		</div>
+			<!-- Row 4 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Type" content=this.Type inputType="picklist"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Probability (%)" 
+				content=22 inputType="input"}}</div>
+			</div>
 
-		<!-- Row 5 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Lead Source" content="templated" inputType="picklist"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Expected Revenue" 
-			content="templated" inputType="input"}}</div>
-		</div>
+			<!-- Row 5 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Lead Source" content="" inputType="picklist"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Expected Revenue" 
+				content="" inputType="input"}}</div>
+			</div>
 
-		<!-- Row 6 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Quantity" content="templated" inputType="input"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Next Step" 
-			content="templated" inputType="input"}}</div>
-		</div>
+			<!-- Row 6 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Quantity" content="" inputType="input"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputEdit label="Next Step" 
+				content="" inputType="input"}}</div>
+			</div>
 
-		<!-- Row 7 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-col slds-p-horizontal_small'>{{>inputEdit label="Description" content="templated" inputType="textarea"}}</div>
-		</div>
+			<!-- Row 7 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-col slds-p-horizontal_small'>{{>inputEdit label="Description" content="" inputType="textarea"}}</div>
+			</div>
 
-		<!-- Row 8 -->
-		<div class='slds-grid slds-grid_pull-padded'>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputRead label="Created" content="9/14/2017 3:49 PM" nonEditable="true"}}</div>
-			<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputRead label="Last Modified" content="9/14/2017 3:49 PM" nonEditable="true"}}</div>
-		</div>
+			<!-- Row 8 -->
+			<div class='slds-grid slds-grid_pull-padded'>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputRead label="Created" content="9/14/2017 3:49 PM" nonEditable="true"}}</div>
+				<div class='slds-size_1-of-2 slds-p-horizontal_small'>{{>inputRead label="Last Modified" content="9/14/2017 3:49 PM" nonEditable="true"}}</div>
+			</div>
 
-		<!-- Footer -->
-		<div class='slds-grid slds-grid_align-center slds-p-vertical_medium'>
-			<button class="slds-button slds-button_neutral ff-cancel">Cancel</button>
-			<button class="slds-button slds-button_brand">Save</button>
-		</div>
+			<!-- Footer -->
+			<div class='slds-grid slds-grid_align-center slds-p-vertical_medium'>
+				<button class="slds-button slds-button_neutral ff-cancel">Cancel</button>
+				<button class="slds-button slds-button_brand">Save</button>
+			</div>
+		{{/with}}
 	</div>
 </template>

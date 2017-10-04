@@ -3,7 +3,6 @@ import './detailEdit.html';
 
 Template.detailEdit.onCreated(function () {
 	Session.set('editIsVisible', false);
-	console.log(Session.get('editIsVisible') + " on load");
 });
 
 Template.detailEdit.helpers({

@@ -15,10 +15,8 @@ Template.testPage.helpers({
     opptys.forEach(function(oppty) {
 
       if(oppty.Id == FlowRouter.getParam("testId")){
-        console.log(oppty);
         testOppty = oppty;
       }
-      // console.log(testOppty);
 
     });
     console.log(testOppty);
