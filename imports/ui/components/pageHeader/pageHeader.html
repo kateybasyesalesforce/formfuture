@@ -18,7 +18,7 @@
 	              </li>
 	            </ol>
 	          </nav>
-	          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="{{opptyName}}">{{opptyName}}</h1>
+	          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="{{oppty.Name}}">{{oppty.Name}}</h1>
 	        </div>
 	      </div>
 	    </div>
@@ -55,21 +55,21 @@
 	  <ul class="slds-grid slds-page-header__detail-row">
 	    <li class="slds-page-header__detail-block">
 	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Account Name">Account Name</p>
-	      <p class="slds-text-body_regular slds-truncate" title="{{accountName}}">{{accountName}}</p>
+	      <p class="slds-text-body_regular slds-truncate" title="{{oppty.AccountName}}">{{oppty.AccountName}}</p>
 	    </li>
 	    <li class="slds-page-header__detail-block">
 	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Close Date">Close Date
 	      </p>
-	      <p class="slds-text-body_regular">{{closeDate}}</p>
+	      <p class="slds-text-body_regular">{{oppty.CloseDate}}</p>
 	    </li>
 	    <li class="slds-page-header__detail-block">
 	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Amount">Amount
 	      </p>
-	      <p class="slds-text-body_regular">{{amount}}</p>
+	      <p class="slds-text-body_regular">{{oppty.Amount}}</p>
 	    </li>
 	    <li class="slds-page-header__detail-block">
 	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Opportunity Owner Email">Opportunity Owner Email</p>
-	      <a href="javascript:void(0);">{{opportunityOwnerEmail}}</a>
+	      <a href="javascript:void(0);">{{oppty.OwnerEmail}}</a>
 	    </li>
 	  </ul>
 	</div>

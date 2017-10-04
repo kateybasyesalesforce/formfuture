@@ -12,11 +12,11 @@ import '../../ui/pages/not-found/not-found.js';
 FlowRouter.route('/', {
   name: 'App.home',
   action() {
-    BlazeLayout.render('App_home', { main: 'App_home' });
+    BlazeLayout.render('home', { main: 'home' });
   },
 });
 
-FlowRouter.route('/test/:whichPage/:action/:attempt', {
+FlowRouter.route('/:whichPage/:testId', {
   name: 'App.testPage',
   action() {
     BlazeLayout.render('App_test', { main: 'testPage' });

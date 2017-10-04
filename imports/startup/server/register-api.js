@@ -1,4 +1,4 @@
 // Register your apis here
 
-import '../../api/links/methods.js';
-import '../../api/links/server/publications.js';
+import '../../api/opptys/methods.js';
+import '../../api/opptys/server/publications.js';

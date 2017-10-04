@@ -1,8 +1,13 @@
 <template name="testPage">
 	<div class='ff-option-{{whichPage}}'>
-		{{>pageHeader opptyName="Small Mfg Prop $14K" accountName="Hillside Recycleables Parts LLC" closeDate="7/16/17" amount="$1,375" opportunityOwnerEmail="joy@alta-insurance.com"}}
+		<!-- {{>pageHeader opptyName="" accountName="Hillside Recycleables Parts LLC" closeDate="7/16/17" amount="$1,375" opportunityOwnerEmail="joy@alta-insurance.com"}} -->
+		{{#with oppty}}
+			{{> pageHeader oppty=this}}
+		{{/with}}
 		<div class='slds-m-top_small ff-box slds-p-bottom_none'>
-			{{>path}}
+		{{#with oppty}}
+			{{>path oppty=this}}
+		{{/with}}
 		</div>
 		<div class='slds-grid slds-m-top_small'>
 			<div class='slds-size_2-of-3 slds-p-right_small'>
