@@ -20,6 +20,30 @@ function groupByTwo(arr, groupSize){
   return grouped;
 }
 
+Template.testPage.created = function(){
+    var testOppty = "";
+    opptys.forEach(function(oppty){
+      if(oppty.Id == FlowRouter.getParam('testId')){
+        testOppty = oppty;
+      }
+    });
+    var keys = Object.keys(testOppty);
+    var values = [];
+    for(key in testOppty){
+      values.push(testOppty[key]);
+    }
+    var bigArray = [];
+    for (var i = keys.length - 1; i >= 0; i--) {
+      var obj = {};
+      if(keys[i] != 'Id' && keys[i] != 'designType'){
+        obj.label = keys[i];
+        obj.content = values[i];
+        bigArray.push(obj);
+      }
+    }
+    Session.set('oppty', groupByTwo(bigArray, 2));
+}
+
 Template.testPage.helpers({
   contacts: function(){
     var data={};
@@ -53,26 +77,27 @@ Template.testPage.helpers({
   	return FlowRouter.current().params.whichPage;
   },
   oppty: function(){
-    var testOppty = "";
-    opptys.forEach(function(oppty){
-      if(oppty.Id == FlowRouter.getParam('testId')){
-        testOppty = oppty;
-      }
-    });
-    var keys = Object.keys(testOppty);
-    var values = [];
-    for(key in testOppty){
-      values.push(testOppty[key]);
-    }
-    var bigArray = [];
-    for (var i = keys.length - 1; i >= 0; i--) {
-      var obj = {};
-      if(keys[i] != 'Id' && keys[i] != 'designType'){
-        obj.label = keys[i];
-        obj.content = values[i];
-        bigArray.push(obj);
-      }
-    }
+    // var testOppty = "";
+    // opptys.forEach(function(oppty){
+    //   if(oppty.Id == FlowRouter.getParam('testId')){
+    //     testOppty = oppty;
+    //   }
+    // });
+    // var keys = Object.keys(testOppty);
+    // var values = [];
+    // for(key in testOppty){
+    //   values.push(testOppty[key]);
+    // }
+    // var bigArray = [];
+    // for (var i = keys.length - 1; i >= 0; i--) {
+    //   var obj = {};
+    //   if(keys[i] != 'Id' && keys[i] != 'designType'){
+    //     obj.label = keys[i];
+    //     obj.content = values[i];
+    //     bigArray.push(obj);
+    //   }
+    // }
+    // Session.set('oppty', groupByTwo(bigArray, 2));
     return Session.get('oppty');
   }
 });
@@ -83,6 +108,18 @@ Template.testPage.events({
   'click .ff-cancel'(event, instance) {
     Session.set("editIsVisible", false);
     Session.set("readIsVisible", true);
+  },
+  'click .ff-editInline'(event, instance) {
+    Session.set('editIsVisible', true);
+    Session.set('readIsVisible', false);
+
+    // Session.set('whichField', event.target.id.split('-')[1]);
+    // var whichField = Session.get('whichField');
+    var el = $("#edit-"+event.target.id.split('-')[1]);
+    console.log(el)
+        // el.focus();
+    // console.log($($(this).closest('.slds-tabs_default')));
+    // console.log(el.value);
   },
   'click .ff-save'(event, instance){
     var data = Session.get('oppty');
@@ -113,6 +150,7 @@ Template.testPage.events({
     Session.set("editIsVisible", false);
     Session.set("readIsVisible", true);
     
+    Session.set('oppty', groupByTwo(bigArray, 2));
     return Session.get('oppty');
 
   }
