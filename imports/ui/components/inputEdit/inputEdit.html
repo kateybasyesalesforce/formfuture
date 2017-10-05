@@ -6,17 +6,17 @@
 
 				<div class="test-id__field-label-container">
 					<label class="slds-form-element__label" for="input-unique-id">
-						{{label}}
-						{{#if required}}
+						{{#if isRequired input.label}}
 							<abbr class="slds-required" title="required">*</abbr>
 						{{/if}}
+						{{input.label}}
 					</label>
 				</div> <!-- End label -->
 
 				<div class="slds-form-element__control slds-grid">
-					{{#if inputIsInput inputType }}
-				    <input type="text" id="{{id}}" class="{{isFocused}} slds-input" placeholder="" value="{{content}}" />
-				  {{else}}
+					<!-- {{#if inputIsInput inputType }} -->
+				    <input type="text" id="{{id}}" class="slds-input" placeholder="" value="{{input.content}}" />
+				 <!--  {{else}}
 				  	{{#if inputIsPicklist inputType }}
 				  		{{>pickList}}
 				  	{{else}}
@@ -24,13 +24,13 @@
 				  			{{#with content}}
 					  			{{>lookup accountName = this}}
 				  			{{/with}}
-				  		{{else}}
-				  			{{#if inputIsTextarea inputType}}
-				  				<textarea id="{{id}}" class="slds-textarea" placeholder="Placeholder Text"></textarea>
-				  			{{/if}}
-				  		{{/if}}
+				  		{{else}} -->
+				  			<!-- {{#if inputIsTextarea inputType}} -->
+				  				<!-- <textarea id="{{id}}" class="slds-textarea" placeholder="Placeholder Text"></textarea> -->
+				  			<!-- {{/if}} -->
+<!-- 				  		{{/if}}
 				  	{{/if}}
-				  {{/if}}
+				  {{/if}} -->
 				</div> <!-- End Content -->
 
 			</div>

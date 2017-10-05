@@ -27,8 +27,15 @@ Template.inputEdit.helpers({
   },
   isFocused(){
     var whichField = Session.get('whichField');
-    // console.log(whichField)
-
+  },
+  isRequired(label){
+    console.log(label)
+    if (label == 'Owner' || label == 'Account Name' || label == 'Close Date' || label == 'Stage') {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   // whichField(){
   //   var whichField = Session.get('whichField');

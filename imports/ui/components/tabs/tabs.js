@@ -13,9 +13,9 @@ Template.inputRead.events({
     Session.set('whichField', event.target.id.split('-')[1]);
     var whichField = Session.get('whichField');
     var el = $('#edit-'+whichField)[0];
-    		el.focus();
+    		// el.focus();
     // console.log($($(this).closest('.slds-tabs_default')));
-    console.log(el.value);
+    // console.log(el.value);
   },
   'click .ff-cancel'(event, instance) {
     Session.set("editIsVisible", false);
