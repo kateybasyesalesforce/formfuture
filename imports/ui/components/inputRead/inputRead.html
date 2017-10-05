@@ -4,25 +4,27 @@
 			<div class="slds-form-element slds-form-element_edit slds-grow slds-hint-parent slds-m-vertical_xxx-small">
 
 				<div class="test-id__field-label-container">
-					<span class="test-id__field-label slds-form-element__label slds-m-bottom_none">{{label}}</span>
+					<span class="test-id__field-label slds-form-element__label slds-m-bottom_none">
+						{{input.label}}
+					</span>
 				</div> <!-- End label -->
 
 				<div class="slds-form-element__control slds-grid">
 					<span class="ff-fieldContent slds-form-element__static slds-grow">
-						{{#if link}}
-							<a href="">{{content}}</a>
+						{{#if isLink input.label}}
+							<a href="">{{input.content}}</a>
 						{{else}}
-							{{content}}
+							{{input.content}}
 						{{/if}}
 					</span>
-					{{#unless nonEditable}}
-						<button class="slds-button slds-button_icon ff-editInline" title="Edit Opportunity Owner">
+					{{#if isEditable input.label }}
+						<button id="{{id}}" class="slds-button slds-button_icon ff-editInline" title="Edit Opportunity Owner">
 						  <svg class="slds-button__icon" aria-hidden="true">
 						    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/symbolsUtility.svg#edit" />
 						  </svg>
-						  <span class="slds-assistive-text">Edit {{label}}</span>
+						  <span class="slds-assistive-text">Edit {{input.label}}</span>
 						</button>
-					{{/unless}}
+					{{/if}}
 				</div> <!-- End Content -->
 
 			</div>

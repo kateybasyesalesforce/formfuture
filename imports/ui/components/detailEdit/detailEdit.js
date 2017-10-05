@@ -8,11 +8,14 @@ Template.detailEdit.onCreated(function () {
 Template.detailEdit.helpers({
   editIsVisible() {
     if(Session.get('editIsVisible')) {
-    	return 'slds-show';
+    	return 'ff-show';
     }
     else {
-    	return 'slds-hide';
+    	return 'ff-hide';
     }
+  },
+  id(){
+    return "edit-" + Session.get('whichField');
   },
 });
 

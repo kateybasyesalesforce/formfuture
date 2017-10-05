@@ -1,11 +1,12 @@
 import './inputEdit.html';
 
 
-
-// Template.globalNav.onCreated(function globalNavOnCreated() {
-//   // counter starts at 0
-//   this.counter = new ReactiveVar(0);
-// });
+Template.inputEdit.onRendered = function(){
+  // var idSnippet = event.target.id.split('-')[1];
+  // Tracker.afterFlush(function() {
+  //   this.find('#edit-'+idSnippet).addClass('ff-focus');
+  // }.bind(instance));
+}
 
 Template.inputEdit.helpers({
   inputIsPicklist(inputType) {
@@ -24,11 +25,13 @@ Template.inputEdit.helpers({
     if (inputType == "textarea") {return true}
     	else{return false}
   },
-});
+  isFocused(){
+    var whichField = Session.get('whichField');
+    // console.log(whichField)
 
-// Template.globalNav.events({
-//   'click button'(event, instance) {
-//     // increment the counter when button is clicked
-//     instance.counter.set(instance.counter.get() + 1);
-//   },
-// });
+  }
+  // whichField(){
+  //   var whichField = Session.get('whichField');
+  //   console.log(whichField)
+  // }
+});
