@@ -73,15 +73,50 @@ Template.testPage.helpers({
         bigArray.push(obj);
       }
     }
-    Session.set('oppty', groupByTwo(bigArray, 2));
-    // console.log(Session.get('oppty'));
     return Session.get('oppty');
   }
 });
 
 
 
+Template.testPage.events({
+  'click .ff-cancel'(event, instance) {
+    Session.set("editIsVisible", false);
+    Session.set("readIsVisible", true);
+  },
+  'click .ff-save'(event, instance){
+    var data = Session.get('oppty');
 
+    var keys = [];
+    var newValues = [];
+
+    var els = $('.detailEditContainer').find('.slds-input')
+    for (var i = els.length - 1; i >= 0; i--) {
+      var el = els[i];
+      var id = el.id.split('-')[1];
+
+      keys.push(id);
+      newValues.push(el.value);
+      
+    }
+
+    var bigArray = [];
+    for (var i = keys.length - 1; i >= 0; i--) {
+      var obj = {};
+      if(keys[i] != 'Id' && keys[i] != 'designType'){
+        obj.label = keys[i];
+        obj.content = newValues[i];
+        bigArray.push(obj);
+      }
+    }
+    Session.set('oppty', groupByTwo(bigArray, 2));
+    Session.set("editIsVisible", false);
+    Session.set("readIsVisible", true);
+    
+    return Session.get('oppty');
+
+  }
+});
 
 
 

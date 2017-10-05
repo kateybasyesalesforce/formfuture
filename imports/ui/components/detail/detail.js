@@ -12,7 +12,6 @@ Template.detail.onCreated(function () {
 
 Template.detail.helpers({
 	isEmpty(label){
-		console.log(label)
 		var data = Session.get('oppty');
 		for (var i = data.length - 1; i >= 0; i--) {
 			for (var j = data[i].length - 1; j >= 0; j--) {

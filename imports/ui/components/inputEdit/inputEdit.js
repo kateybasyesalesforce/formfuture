@@ -29,7 +29,6 @@ Template.inputEdit.helpers({
     var whichField = Session.get('whichField');
   },
   isRequired(label){
-    console.log(label)
     if (label == 'Owner' || label == 'Account Name' || label == 'Close Date' || label == 'Stage') {
       return true;
     }
