@@ -4,7 +4,7 @@
 			<div class='slds-grid slds-grid_pull-padded'>
 				{{#each item in row}}
 					<div class='slds-size_1-of-2 slds-p-horizontal_small'>
-						<div class=''>
+						<div class='{{isEmpty item.label}}'>
 							{{>inputRead input=item }}
 						</div>
 					</div>

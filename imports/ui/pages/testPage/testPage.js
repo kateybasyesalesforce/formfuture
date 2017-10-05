@@ -33,7 +33,7 @@ Template.testPage.helpers({
       data.values.push(contactValues);
     });
     return data;
-    console.log(data.values[0]);
+    // console.log(data.values[0]);
   },
   products: function(){
     var data={};
@@ -47,7 +47,7 @@ Template.testPage.helpers({
       data.values.push(productValues);
     });
     return data;
-    console.log(data.values[0]);
+    // console.log(data.values[0]);
   },
   whichPage: function(){
   	return FlowRouter.current().params.whichPage;
@@ -74,7 +74,7 @@ Template.testPage.helpers({
       }
     }
     Session.set('oppty', groupByTwo(bigArray, 2));
-    console.log(Session.get('oppty'));
+    // console.log(Session.get('oppty'));
     return Session.get('oppty');
   }
 });

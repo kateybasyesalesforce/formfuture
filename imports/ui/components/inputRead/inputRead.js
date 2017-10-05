@@ -9,6 +9,9 @@ Template.inputRead.helpers({
       return true;
     }
   },
+  isEmpty: function(){
+
+  },
   isLink: function(label){
     if(label == "Owner" || label == "Account Name") {
       return true;
