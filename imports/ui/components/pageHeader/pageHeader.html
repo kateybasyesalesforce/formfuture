@@ -18,7 +18,7 @@
 	              </li>
 	            </ol>
 	          </nav>
-	          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="{{oppty.Name}}">{{oppty.Name}}</h1>
+	          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="{{opptyName}}">{{opptyName.content}}</h1>
 	        </div>
 	      </div>
 	    </div>
@@ -53,24 +53,16 @@
 	    </div>
 	  </div>
 	  <ul class="slds-grid slds-page-header__detail-row">
-	    <li class="slds-page-header__detail-block">
-	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Account Name">Account Name</p>
-	      <p class="slds-text-body_regular slds-truncate" title="{{oppty.AccountName}}">{{oppty.AccountName}}</p>
-	    </li>
-	    <li class="slds-page-header__detail-block">
-	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Close Date">Close Date
-	      </p>
-	      <p class="slds-text-body_regular">{{oppty.CloseDate}}</p>
-	    </li>
-	    <li class="slds-page-header__detail-block">
-	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Amount">Amount
-	      </p>
-	      <p class="slds-text-body_regular">{{oppty.Amount}}</p>
-	    </li>
-	    <li class="slds-page-header__detail-block">
-	      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Opportunity Owner Email">Opportunity Owner Email</p>
-	      <a href="javascript:void(0);">{{oppty.OwnerEmail}}</a>
-	    </li>
+	  	{{#each item in oppty}}
+		    <li class="slds-page-header__detail-block">
+		      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="{{item.label}}">{{item.label}}</p>
+		      {{#if isLink item.label}}
+		      	<a class="slds-text-body_regular slds-truncate" href="" title="{{item.content}}">{{item.content}}</a>
+		      {{else}}
+		      	<p class="slds-text-body_regular slds-truncate" title="{{item.content}}">{{item.content}}</p>
+		      {{/if}}
+		    </li>
+	  	{{/each}}
 	  </ul>
 	</div>
 </template>

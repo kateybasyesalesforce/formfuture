@@ -20,8 +20,8 @@ Template.detailEdit.helpers({
 });
 
 Template.detailEdit.events({
-  'click .ff-cancel'(event, instance) {
-    Session.set("editIsVisible", false);
-    Session.set("readIsVisible", true);
-  },
+  // 'click .ff-cancel'(event, instance) {
+  //   Session.set("editIsVisible", false);
+  //   Session.set("readIsVisible", true);
+  // },
 });
