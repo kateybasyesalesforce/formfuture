@@ -42,7 +42,6 @@ Template.detailEdit.helpers({
     return "edit-" + Session.get('whichField');
   },
   isEditable: function(label){
-    console.log(label)
     if (label == "Owner" || label == "Created" || label == "Last Modified") {
       return false;
     }
