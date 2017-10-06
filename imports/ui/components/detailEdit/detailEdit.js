@@ -23,8 +23,32 @@ Template.detailEdit.helpers({
     	return 'ff-hide';
     }
   },
+  isEmpty(label){
+    var data = Session.get('oppty');
+    for (var i = data.length - 1; i >= 0; i--) {
+      for (var j = data[i].length - 1; j >= 0; j--) {
+        if(data[i][j].label == label){
+          if(data[i][j].content){
+            return 'full';
+          }
+          else {
+            return 'empty';
+          }
+        }
+      }
+    }
+  },
   id(){
     return "edit-" + Session.get('whichField');
+  },
+  isEditable: function(label){
+    console.log(label)
+    if (label == "Owner" || label == "Created" || label == "Last Modified") {
+      return false;
+    }
+    else {
+      return true;
+    }
   },
   oppty(){
     return Session.get('oppty');
