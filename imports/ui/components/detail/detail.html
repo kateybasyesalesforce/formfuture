@@ -1,9 +1,9 @@
 <template name="detail">
 	<div class='detailContainer {{readIsVisible}}'>
 		{{#each row in oppty}}
-			<div class='slds-grid slds-grid_pull-padded'>
+			<div class='slds-grid slds-grid_pull-padded slds-m-bottom_x-small'>
 				{{#each item in row}}
-					<div class='slds-size_1-of-2 slds-p-horizontal_small'>
+					<div class='slds-size_1-of-2 slds-p-horizontal_small '>
 						<div class='{{isEmpty item.label}}'>
 							{{>inputRead input=item }}
 						</div>

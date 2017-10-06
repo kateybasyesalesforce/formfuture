@@ -53,7 +53,7 @@ html {
 
 	.ff-fieldContent, .empty .ff-fieldContent {
 		border-bottom: 1px solid rgb(236, 235, 234);
-	  min-height: auto;
+    min-height: calc(1.5rem - 2px);
 	  padding: 0;
 	}
 
