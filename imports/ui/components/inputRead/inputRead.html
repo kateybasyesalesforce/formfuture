@@ -18,7 +18,7 @@
 						{{/if}}
 					</span>
 					{{#if isEditable input.label }}
-						<button id="{{id}}" class="slds-button slds-button_icon ff-editInline" title="Edit Opportunity Owner">
+						<button onclick="$('edit-{{id input.label}}').focus()" id="button-{{id input.label}}" for="edit-{{id input.label}}" class="slds-button slds-button_icon ff-editInline" title="Edit Opportunity Owner">
 						  <svg class="slds-button__icon" aria-hidden="true">
 						    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/symbolsUtility.svg#edit" />
 						  </svg>

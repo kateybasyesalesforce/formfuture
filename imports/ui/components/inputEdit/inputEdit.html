@@ -5,7 +5,7 @@
 			<div class="slds-form-element slds-form-element_edit slds-grow slds-hint-parent slds-p-vertical_xx-small">
 
 				<div class="test-id__field-label-container">
-					<label class="slds-form-element__label" for="input-unique-id">
+					<label class="slds-form-element__label" for="edit-{{id input.label}}">
 						{{#if isRequired input.label}}
 							<abbr class="slds-required" title="required">*</abbr>
 						{{/if}}
@@ -15,7 +15,7 @@
 
 				<div class="slds-form-element__control slds-grid">
 					<!-- {{#if inputIsInput inputType }} -->
-				    <input type="text" id="edit-{{input.label}}" class="slds-input" placeholder="" value="{{input.content}}" />
+				    <input type="text" id="edit-{{id input.label}}" class="slds-input" placeholder="" value="{{input.content}}" />
 				 <!--  {{else}}
 				  	{{#if inputIsPicklist inputType }}
 				  		{{>pickList}}

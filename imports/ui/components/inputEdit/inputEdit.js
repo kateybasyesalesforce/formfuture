@@ -9,6 +9,9 @@ Template.inputEdit.onRendered = function(){
 }
 
 Template.inputEdit.helpers({
+  id: function(label){
+    return label.split(' ').join('_');
+  },
   inputIsPicklist(inputType) {
     if (inputType == "picklist") {return true}
     	else{return false}

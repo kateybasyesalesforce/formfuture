@@ -1,8 +1,11 @@
 import './inputRead.html';
 
 Template.inputRead.helpers({
+  id: function(label){
+    return label.split(' ').join('_');
+  },
   isEditable: function(label){
-    if (label == "Owner" || label == "Created" || label == "Modified") {
+    if (label == "Owner" || label == "Created" || label == "Last Modified") {
       return false;
     }
     else {
