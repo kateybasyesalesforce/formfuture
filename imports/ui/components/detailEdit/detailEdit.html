@@ -4,13 +4,7 @@
 			<div class='slds-grid slds-grid_pull-padded slds-m-bottom_x-small'>
 				{{#each item in row}}
 					<div class='slds-size_1-of-2 slds-p-horizontal_small'>
-						{{#if isEditable item.label }}
 							{{>inputEdit input=item }}
-						{{else}}
-							<div class='{{isEmpty item.label}}'>
-								{{>inputRead input=item }}
-							</div>
-						{{/if}}
 					</div>
 				{{/each}}
 			</div>
