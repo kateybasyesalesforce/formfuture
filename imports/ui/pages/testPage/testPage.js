@@ -81,6 +81,14 @@ Template.testPage.helpers({
 });
 
 Template.testPage.events({
+  'mouseover #tab-default-2 .slds-button_icon'(event, instance) {
+    var input = $(event.target).prev();
+    $(input[0]).css('borderBottomColor', '#0070d2');
+  },
+  'mouseout #tab-default-2 .slds-button_icon'(event, instance) {
+    var input = $(event.target).prev();
+    $(input[0]).css('borderBottomColor', '#dddbda');
+  },
   'click .ff-cancel'(event, instance) {
     Session.set("editIsVisible", false);
     Session.set("readIsVisible", true);

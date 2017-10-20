@@ -42,6 +42,14 @@ html {
 	visibility: hidden;
 }
 
+// .ff-input:hover .ff-fieldContent{
+// 	border-bottom: 1px solid $color-text-button-default-hover;
+// }
+
+// .ff-input:hover .slds-button_icon{
+// 	color: $color-text-button-default-hover;
+// }
+
 // .ff-focus {
 // 	outline: 0;
 //   border-color: rgb(21, 137, 238);
@@ -156,7 +164,7 @@ html {
 	}
 
 	#tab-default-2 .slds-button_icon:hover {
-		color: rgb(0, 112, 210);
+		color: $color-text-button-default-hover;
 	}
 	// .slds-context-bar {
 	// 	border-top: 1px solid rgb(216, 221, 230);
