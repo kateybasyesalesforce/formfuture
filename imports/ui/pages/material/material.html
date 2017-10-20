@@ -1,0 +1,29 @@
+<template name="material">
+	<div class=''>
+		{{#with oppty}}
+			{{> pageHeader oppty=this}}
+		{{/with}}
+		<div class='slds-m-top_small ff-box slds-p-bottom_none'>
+		{{#with oppty}}
+			{{>path oppty=this}}
+		{{/with}}
+		</div>
+		<div class='slds-grid slds-m-top_small'>
+			<div class='slds-size_2-of-3 slds-p-right_small'>
+				<div class='ff-box'>
+					{{#with oppty}}
+						{{>tabs oppty=this}}
+					{{/with}}
+				</div>
+			</div>
+			<div class='slds-size_1-of-3'>
+				{{#with contacts }}
+					{{>card icon="contact" objectName="Contacts" count=5 headers = this.keys data=this }}
+				{{/with}}
+				{{#with products }}
+					{{>card icon="product" objectName="Products" count=5 headers = this.keys data=this }}
+				{{/with}}
+			</div>
+		</div>
+	</div>
+</template>
